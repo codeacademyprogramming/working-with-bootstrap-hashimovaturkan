@@ -1,0 +1,9 @@
+.footer{
+    padding: 12rem 0;
+    background-color: $color-white;
+    position: relative;
+    &__inner{
+        @include transform-center;
+    }
+    
+}

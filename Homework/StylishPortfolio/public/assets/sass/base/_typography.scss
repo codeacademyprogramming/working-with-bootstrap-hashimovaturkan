@@ -1,0 +1,58 @@
+.heading-primary{
+    color: #212529;
+    min-width: 70rem;
+    &--main{
+        font-size: 10rem;
+    }
+    &--sub{
+        font-style: italic;
+        font-size: 3rem;
+    }
+}
+
+.describtion-heading{
+    font-size: 3.2rem;
+
+}
+.describtion-text{
+    font-weight: 100;
+    font-size: 1.9rem;
+    a{
+        color: $color-primary-blue;
+    }
+}
+.heading-third{
+    color: $color-heading-secondary;
+}
+.heading-secondary{
+    font-size: 5rem;
+    &--bigger{
+        font-size: 6.5rem;
+        min-width: 70rem;
+        margin-right: 4rem;
+        margin-left: 4rem;
+        
+    }
+    &--white{
+        font-size: 3.5rem;
+        color: $color-white;
+    }
+    
+}
+
+.project-desc{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-white;
+    font-weight: 100;
+    
+    h4{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    
+}

@@ -1,0 +1,29 @@
+.offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__roll{
+        display: inline-block;
+        background-color: $color-white;
+        width: 11rem;
+        height: 11rem;
+        box-shadow: 0 3px 3px 0 rgba($color-white, 0.1%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            fill: $color-primary-blue;
+        }
+    }
+    &__title{
+        color: $color-white;
+        font-size: 2.3rem;
+    }
+    &__text{
+        text-align: center;
+        color: rgba($color-white, 0.7%);
+        font-size: 1.8rem;
+        padding: 0 2rem;
+    }
+}

@@ -1,0 +1,21 @@
+.media{
+    display: flex;
+    flex-direction: row;
+    &__item{
+        width: 7rem;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            fill: $color-white;
+        }
+        
+   
+        &:hover{
+            background-color: #155d74 !important;
+        }
+    
+        
+    }
+}
