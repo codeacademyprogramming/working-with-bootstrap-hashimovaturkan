@@ -9,6 +9,25 @@
     <title>Stylish Portfolio</title>
 </head>
 <body>
+    <div class="menu">
+        <label for="hamburger-menu">
+            <i>
+                <svg class="svg-inline--fa fa-bars fa-w-14 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 500" data-fa-i2svg=""><path fill="white" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+            </i>
+            
+        </label>
+        <input type="checkbox" id="hamburger-menu" style="display: none;">
+        <nav class="menu-sidebar">
+            <ul>
+                <li><a href="#" class="menu-sidebar__item menu-sidebar__item--header">Start Bootstrap</a></li>
+                <li><a href="#" class="menu-sidebar__item ">Home</a></li>
+                <li><a href="#about" class="menu-sidebar__item ">About</a></li>
+                <li><a href="#services" class="menu-sidebar__item ">Services</a></li>
+                <li><a href="#project" class="menu-sidebar__item ">Portfolio</a></li>
+                <li><a href="#map" class="menu-sidebar__item ">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="main-header">
         <div class="container">
             <div class="main-header__inner text-center">
@@ -21,7 +40,7 @@
         </div>
     </header>
     <main>
-        <section class="section-describtion px-5">
+        <section class="section-describtion px-5" id="about">
             <div class="container">
                 <div class="section-description__inner text-center">
                     <h2 class="describtion-heading mb-3">Stylish Portfolio is the perfect theme for your next project!</h2>
@@ -30,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-offer bg-primary px-5">
+        <section class="section-offer bg-primary px-5" id="services">
             <div class="container">
                 <h3 class="heading-third text-center mb-3">SERVICES</h3>
                 <h2 class="heading-secondary mb-5 text-center">What We Offer</h2>
@@ -103,14 +122,17 @@
                 </div>
             </div>
         </section>
-        <section class="projects ">
-            <div class="container px-5" >
+        <section class="projects" id="project" >
+            <div class="container px-5">
                 <h3 class="heading-third text-center mb-3">PORTFOLIO</h3>
                 <h2 class="heading-secondary mb-5 text-center">Recent Projects</h2>
-                <div class="row " >
+                <div class="row" >
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-                        <div class="projects__inner " >
-                            <img src="./public/assets/images/portfolio-1.jpg" alt="portfolio-1">
+                        <div class="projects__wrapper">
+                            <div class="projects__inner" >
+                                <img src="./public/assets/images/portfolio-1.jpg" alt="portfolio-1">
+                                <div class="project-blur"></div>
+                            </div>
                             <div class="project-desc">
                                 <h4 class="mb-3">STATIONARY</h4>
                                 <p>A yellow pencil with envelopes on a clean, blue backdrop!</p>
@@ -118,8 +140,11 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0" >
-                        <div class="projects__inner p-0">
-                            <img src="./public/assets/images/portfolio-2.jpg" alt="portfolio-2">
+                        <div class="projects__wrapper">
+                            <div class="projects__inner ">
+                                <img src="./public/assets/images/portfolio-2.jpg" alt="portfolio-2">
+                                <div class="project-blur"></div>
+                            </div>
                             <div class="project-desc">
                                 <h4 class="mb-3">ICE CREAM</h4>
                                 <p>A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
@@ -127,8 +152,11 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-                        <div class="projects__inner p-0">
-                            <img src="./public/assets/images/portfolio-3.jpg" alt="portfolio-3">
+                        <div class="projects__wrapper">
+                            <div class="projects__inner">
+                                <img src="./public/assets/images/portfolio-3.jpg" alt="portfolio-3">
+                                <div class="project-blur"></div>
+                            </div>
                             <div class="project-desc">
                                 <h4 class="mb-3">STRAWBERRIES</h4>
                                 <p>Strawberries are such a tasty snack, especially with a little sugar on top!</p>
@@ -136,8 +164,11 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-                        <div class="projects__inner p-0">
-                            <img src="./public/assets/images/portfolio-4.jpg" alt="portfolio-4">
+                        <div class="projects__wrapper">
+                            <div class="projects__inner">
+                                <img src="./public/assets/images/portfolio-4.jpg" alt="portfolio-4">
+                                <div class="project-blur"></div>
+                            </div>
                             <div class="project-desc">
                                 <h4 class="mb-3">WORKSPACE</h4>
                                 <p>A yellow workspace with some scissors, pencils, and other objects.</p>
@@ -156,7 +187,7 @@
                 </div>
             </div>
         </section>
-        <section class="map">
+        <section class="map" id="map">
             <div class="container-fluid p-0">
                 <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
             </div>

@@ -1,8 +1,37 @@
+// @font-face {
+//     font-family: 'Source Sans Pro';
+//     src: url('../fonts/SourceSansPro/SourceSansPro-Light.eot');
+//     src: url('../fonts/SourceSansPro/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Light.woff2') format('woff2'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Light.woff') format('woff'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Light.ttf') format('truetype'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Source Sans Pro bold';
+//     src: url('../fonts/SourceSansPro/SourceSansPro-Bold.eot');
+//     src: url('../fonts/SourceSansPro/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Bold.woff2') format('woff2'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Bold.woff') format('woff'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Bold.ttf') format('truetype'),
+//         url('../fonts/SourceSansPro/SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+//bu nie islemedi?
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
 .heading-primary{
     color: #212529;
-    min-width: 70rem;
+    max-width: 90rem;
     &--main{
-        font-size: 10rem;
+        font-size: 6rem;
     }
     &--sub{
         font-style: italic;
@@ -28,7 +57,7 @@
     font-size: 5rem;
     &--bigger{
         font-size: 6.5rem;
-        min-width: 70rem;
+        max-width: 50rem;
         margin-right: 4rem;
         margin-left: 4rem;
         
@@ -42,17 +71,20 @@
 
 .project-desc{
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     color: $color-white;
     font-weight: 100;
-    
+    z-index: 1;
+    padding: 80px;
+    cursor: pointer;
+    bottom: 0;
     h4{
         font-size: 1.3rem;
     }
     p{
+        
         font-size: 2rem;
+        
     }
     
 }

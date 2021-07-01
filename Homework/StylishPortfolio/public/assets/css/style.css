@@ -6,6 +6,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
 .container,
 .container-fluid,
 .container-sm,
@@ -9099,13 +9100,20 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.6rem !important; }
+  font-size: 1.6rem !important;
+  font-family: "Source Sans Pro", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
 
 .heading-primary {
   color: #212529;
-  min-width: 70rem; }
+  max-width: 90rem; }
   .heading-primary--main {
-    font-size: 10rem; }
+    font-size: 6rem; }
   .heading-primary--sub {
     font-style: italic;
     font-size: 3rem; }
@@ -9126,7 +9134,7 @@ body {
   font-size: 5rem; }
   .heading-secondary--bigger {
     font-size: 6.5rem;
-    min-width: 70rem;
+    max-width: 50rem;
     margin-right: 4rem;
     margin-left: 4rem; }
   .heading-secondary--white {
@@ -9135,11 +9143,13 @@ body {
 
 .project-desc {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   color: #fff;
-  font-weight: 100; }
+  font-weight: 100;
+  z-index: 1;
+  padding: 80px;
+  cursor: pointer;
+  bottom: 0; }
   .project-desc h4 {
     font-size: 1.3rem; }
   .project-desc p {
@@ -9198,7 +9208,8 @@ body {
   max-width: 100%;
   height: 100vh;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  opacity: 95%; }
   .main-header__inner {
     position: absolute;
     top: 50%;
@@ -9216,6 +9227,52 @@ body {
     transform: translate(-50%, -50%); }
 
 /*PAGES*/
+.menu label {
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  z-index: 99999;
+  display: inline-block;
+  padding: 14px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  cursor: pointer; }
+  .menu label i {
+    display: inline-block; }
+    .menu label i svg {
+      width: 25px;
+      height: 17px;
+      text-align: center; }
+
+.menu input:checked + .menu-sidebar {
+  right: 0%; }
+
+.menu .menu-sidebar {
+  position: fixed;
+  width: 25rem;
+  top: 0%;
+  right: -25rem;
+  z-index: 999;
+  background-color: #1D809F;
+  height: 100vh;
+  transition: all .4s; }
+  .menu .menu-sidebar li {
+    width: 100%; }
+  .menu .menu-sidebar__item {
+    font-size: 1.8rem;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 15px 20px; }
+    .menu .menu-sidebar__item:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
+    .menu .menu-sidebar__item--header {
+      font-size: 2rem;
+      padding: 30px 20px;
+      background-color: #1974a8; }
+      .menu .menu-sidebar__item--header:hover {
+        background-color: #1974a8; }
+
 .section-describtion {
   position: relative;
   background-color: #fff;
@@ -9242,12 +9299,33 @@ body {
 
 .projects {
   padding: 12rem 0; }
+  .projects__wrapper {
+    position: relative;
+    margin-bottom: -4px; }
+    .projects__wrapper:hover {
+      margin-bottom: 0px; }
+    .projects__wrapper:hover .projects__inner {
+      transform: scale(0.85);
+      cursor: pointer; }
+    .projects__wrapper:hover .project-blur {
+      opacity: 0.9; }
+    .projects__wrapper:hover img {
+      margin-bottom: -4px; }
+    .projects__wrapper:hover .project-desc {
+      margin-bottom: -4px; }
   .projects__inner {
     position: relative;
     transition: all .5s; }
-    .projects__inner:hover {
-      transform: scale(0.8);
-      cursor: pointer; }
+    .projects__inner .project-blur {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #1D809F;
+      opacity: 0;
+      z-index: 0;
+      transition: all .5s; }
   .projects img {
     width: 100%;
     filter: brightness(80%); }
@@ -9260,5 +9338,18 @@ body {
   .map iframe {
     width: 100%;
     height: 50rem; }
+
+@media screen and (min-width: 992px) {
+  .heading-primary {
+    min-width: 90rem; }
+    .heading-primary--main {
+      font-size: 10rem; } }
+
+@media screen and (min-width: 992px) {
+  .heading-secondary--bigger {
+    font-size: 6.5rem;
+    min-width: 70rem;
+    margin-right: 4rem;
+    margin-left: 4rem; } }
 
 /*THEMES*/
